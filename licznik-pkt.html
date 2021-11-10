@@ -1,0 +1,636 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.jpg">
+
+    <title>Kalkulator punktów do szkoły średniej</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	
+  </head>
+
+  <body class="bg-light">
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="favicon.jpg" alt="" width="72" height="72">
+        <h2>Licznik punktów do szkoły średniej</h2>
+        <p class="lead">Nie daję 100% pewności, że punkty są dobrze policzone!</p>
+      </div>
+
+
+        
+        <div class="">
+          <h4 class="mb-3">Wyniki egzaminów</h4>
+          <form class="needs-validation" novalidate>
+            <div class="row">
+			
+              <div class="col">
+                  <label for="username">j. Polski</label>
+                  <div class="input-group" >
+                  
+                  <input type="number" class="form-control egzamin-pol" id="egzamin-pol" placeholder="0-100 [%]" min="0" max="100" step="1" required>
+                  <div class="input-group-addon">
+                    <span class="input-group-text">%</span>
+                  </div>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Wpisz liczbę od 0 do 100
+                  </div>
+                  </div>
+            </div>
+
+              <div class="col">
+					<label for="username">j. Angielski</label>
+					<div class="input-group">
+					
+					<input type="number" class="form-control egzamin-ang" id="egzamin-ang" placeholder="0-100 [%]" min="0" max="100" step="1" required>
+					<div class="input-group-addon">
+					  <span class="input-group-text">%</span>
+					</div>
+					<div class="invalid-feedback" style="width: 100%;">
+					  Wpisz liczbę od 0 do 100
+					</div>
+					</div>
+              </div>
+			  <div class="col">
+					<label for="username">Matematyka</label>
+					<div class="input-group">
+					
+					<input type="number" class="form-control egzamin-mat" id="egzamin-mat" placeholder="0-100 [%]" min="0" max="100" step="1" required>
+					<div class="input-group-addon">
+					  <span class="input-group-text">%</span>
+					</div>
+					<div class="invalid-feedback" style="width: 100%;">
+					  Wpisz liczbę od 0 do 100
+					</div>
+					</div>
+              </div>
+            </div>
+			  <br \><br \>
+			
+			  <h4 class="mb-3">Oceny</h4>
+          <form class="needs-validation" novalidate>
+            <div class="row">
+			
+              <div class="col">
+                <label for="cc-name">j. Polski</label>
+                <input type="number" class="form-control ocena-pol" id="ocena-pol" placeholder="2-6" min="2" max="6" step="1" required>
+                <div class="invalid-feedback">
+                  Wpisz liczbę od 2 do 6
+                </div>
+              </div>
+
+              <div class="col">
+                <label for="cc-name">Matematyka</label>
+                <input type="number" class="form-control ocena-mat" id="ocena-mat" placeholder="2-6" min="2" max="6" step="1" required>
+                <div class="invalid-feedback">
+                  Wpisz liczbę od 2 do 6
+                </div>
+              </div>
+			  
+			  <div class="col">
+                <label for="cc-name">I przedmiot</label>
+                <input type="number" class="form-control ocena-1" id="ocena-1" placeholder="2-6" min="2" max="6" step="1" required>
+                <small class="text-muted">Wybrany przez szkołę średnią</small>
+                <div class="invalid-feedback">
+                  Wpisz liczbę od 2 do 6
+                </div>
+              </div>
+			  
+			  <div class="col">
+                <label for="cc-name">II przedmiot</label>
+                <input type="number" class="form-control ocena-2" id="ocena-2" placeholder="2-6" min="2" max="6" step="1" required>
+                <small class="text-muted">Wybrany przez szkołę średnią</small>
+                <div class="invalid-feedback">
+                  Wpisz liczbę od 2 do 6
+                </div>
+              </div>
+            </div>
+			  <br \>
+
+            
+
+            
+       
+
+            <h4 class="mb-3">Inne</h4>
+			
+			  <hr class="mb-4">
+			
+            <div class="d-block my-3">
+				<label for="cc-name">Dostaniesz punkty za wolontariat?</label>
+				<select class="form-select form-control wolontariat" id="wolontariat" style="width: 25%;" required>
+					<option value="" selected>Wybierz</option>
+					<option value="1">Tak</option>
+					<option value="2">Nie</option>
+				</select>
+            </div>
+			
+          <div class="d-block my-3">
+            <label for="cc-name">Dostaniesz czerwony pasek?</label>
+            <select class="form-select form-control pasek" id="pasek" style="width: 25%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="1">Tak</option>
+              <option value="2">Nie</option>
+            </select>
+                </div>
+          
+          <div class="d-block my-3">
+            <label for="cc-name">Czy jesteś finalistą olimpiady przedmiotowej?</label>
+            <select class="form-select form-control olimpiada" id="olimpiada" style="width: 25%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="1">Tak</option>
+              <option value="2">Nie</option>
+            </select>
+                </div>
+          
+          <hr class="mb-4">
+          
+          <div class="alert alert-info" role="alert">
+            Każde osiągnięcie przypisz tylko do jednej kategorii!
+          </div>
+          
+          
+          <div class="d-block my-3">
+            <label for="cc-name">Czy jesteś finalistą przedmiotowego konkursu <u>wiedzy o zasięgu ponadwojewódzkim organizowanego przez kuratorów oświaty</u>?</label>
+            <select class="form-select form-control" id="konkursy1" style="width: 25%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="1">Tak</option>
+              <option value="2">Tak >1</option>
+              <option value="3">Nie</option>
+            </select>
+          </div>
+
+          <div class="d-block my-3">
+            <label for="cc-name">Czy jesteś finalistą tematycznego lub interdyscyplinarnego konkursu <u>wiedzy o zasięgu ponadwojewódzkim organizowanego przez kuratorów oświaty</u>?</label>
+            <select class="form-select form-control" id="konkursy2" style="width: 25%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="1">Tak</option>
+              <option value="2">Tak x2</option>
+              <option value="3">Nie</option>
+            </select>
+          </div>
+
+          <div class="d-block my-3">
+            <label for="cc-name">Czy jesteś laureatem tematycznego lub interdyscyplinarnego konkursu <u>wiedzy o zasięgu ponadwojewódzkim organizowanego przez kuratorów oświaty</u>?</label>
+            <select class="form-select form-control" id="konkursy3" style="width: 25%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="1">Tak</option>
+              <option value="2">Tak x2</option>
+              <option value="3">Nie</option>
+            </select>
+          </div>
+
+          <div class="d-block my-3">
+            <label for="cc-name">Czy jesteś finalistą <u>konkursu o zasięgu międzynarodowym/ogólnopolskim</u> z przedmiotów artystycznych objętych ramowym planem nauczania szkoły artystycznej?</label>
+            <select class="form-select form-control" id="konkursy4" style="width: 25%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="1">Tak</option>
+              <option value="2">Tak >1</option>
+              <option value="3">Nie</option>
+            </select>
+          </div>
+
+          <div class="d-block my-3">
+            <label for="cc-name">Czy jesteś laureatem <u>turnieju o zasięgu ogólnopolskim</u> z przedmiotów artystycznych nieobjętych ramowym planem nauczania szkoły artystycznej?</label>
+            <select class="form-select form-control" id="konkursy5" style="width: 25%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="1">Tak</option>
+              <option value="2">Tak x2</option>
+              <option value="3">Nie</option>
+            </select>
+          </div>
+
+          <div class="d-block my-3">
+            <label for="cc-name">Czy jesteś finalistą <u>turnieju o zasięgu ogólnopolskim</u> z przedmiotu lub przedmiotów artystycznych nieobjętych ramowym planem nauczania szkoły artystycznej?</label>
+            <select class="form-select form-control" id="konkursy6" style="width: 25%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="1">Tak</option>
+              <option value="2">Tak x2</option>
+              <option value="3">Nie</option>
+            </select>
+          </div>
+
+
+          <div class="d-block my-3">
+            <label for="cc-name">Czy jesteś finalistą przedmiotowego konkursu wiedzy <u>o zasięgu wojewódzkim organizowanego przez kuratorów oświaty</u> <b>(np. zDolnego Ślązaka)</b>?</label>
+            <select class="form-select form-control" id="konkursy7" style="width: 25%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="1">Tak</option>
+              <option value="2">Tak >1</option>
+              <option value="3">Nie</option>
+            </select>
+          </div>
+
+          <div class="d-block my-3">
+            <label for="cc-name">Czy jesteś <u>finalistą konkursu z przedmiotów artystycznych</u> objętych ramowym planem nauczania szkoły artystycznej?</label>
+            <select class="form-select form-control" id="konkursy8" style="width: 25%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="1">Tak</option>
+              <option value="2">Tak >1</option>
+              <option value="3">Nie</option>
+            </select>
+          </div>
+
+
+          <div class="d-block my-3">
+            <label for="cc-name">Czy jesteś <u>laureatem turnieju z przedmiotów artystycznych</u> nieobjętych ramowym planem nauczania szkoły artystycznej?</label>
+            <select class="form-select form-control" id="konkursy9" style="width: 25%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="1">Tak</option>
+              <option value="2">Tak >1</option>
+              <option value="3">Nie</option>
+            </select>
+          </div>
+
+          <div class="d-block my-3">
+            <label for="cc-name">Czy jesteś <u>finalistą turnieju z przedmiotów artystycznych</u> nieobjętych ramowym planem nauczania szkoły artystycznej?</label>
+            <select class="form-select form-control" id="konkursy10" style="width: 75%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="0">Nie</option>
+              <option value="1">Tak, międzynarodowym</option>
+              <option value="2">Tak, międzynarodowym x2</option>
+              <option value="3">Tak, krajowym</option>
+              <option value="4">Tak, krajowym x2</option>
+              <option value="5">Tak, wojewódzkim</option>
+              <option value="6">Tak, wojewódzkim x2</option>
+              <option value="7">Tak, powiatowym</option>
+              <option value="8">Tak, powiatowym x2</option>
+            </select>
+          </div>
+			
+           
+            
+            <button class="btn btn-primary btn-lg btn-block submitbtn" type="submit" >Oblicz punkty</button>
+          </form>
+
+
+          
+        </div>
+
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">by Szymon Elsner</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://szymonelsner.pl">szymonelsner.pl</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              //if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              //}
+
+              
+              
+              
+              
+              form.classList.add('was-validated');
+              if (form.checkValidity()) {
+                var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                myModal.show();
+              }else{
+                var myModal2 = new bootstrap.Modal(document.getElementById('exampleModal2'));
+                myModal2.show();
+              }
+
+
+            }, false);
+          });
+        }, false);
+      })();
+      
+    </script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+
+  <script type="text/javascript">
+$("#prospects_form").submit(function(e) {
+    e.preventDefault();
+});
+
+     $( document ).ready(function() {
+      
+        
+        $(document).on('click', '.submitbtn', function() {
+          
+            //alert("x");
+
+            var suma = 0;
+
+            var pktzaoceny = [0, 2, 8, 14, 17, 18];
+
+            //EGZAMINY
+            var egzaminy = 0;
+
+            egzaminy += (document.getElementById('egzamin-pol').value / 100) * 35;
+            egzaminy += (document.getElementById('egzamin-ang').value / 100) * 30;
+            egzaminy += (document.getElementById('egzamin-mat').value / 100) * 35;
+
+            document.getElementById('egzaminy').textContent = egzaminy;
+            suma += egzaminy;
+
+            //OCENY
+            var oceny = 0;
+
+            oceny += pktzaoceny[(Number(document.getElementById('ocena-pol').value) || 1) - 1];
+            oceny += pktzaoceny[(Number(document.getElementById('ocena-mat').value) || 1) - 1];
+            oceny += pktzaoceny[(Number(document.getElementById('ocena-1').value) || 1) - 1];
+            oceny += pktzaoceny[(Number(document.getElementById('ocena-2').value) || 1) - 1];
+            //oceny += pktzaoceny[document.getElementById('ocena-mat').value - 1];
+            //oceny += pktzaoceny[document.getElementById('ocena-1').value - 1];
+            //oceny += pktzaoceny[document.getElementById('ocena-2').value - 1];
+
+            document.getElementById('oceny').textContent = oceny;
+            suma += oceny;
+
+            //INNE1
+            var inne = 0;
+            
+            if(document.getElementById('wolontariat').value == 1){
+              inne += 3;
+              document.getElementById('wolont').textContent = "3";
+            }
+            else if(document.getElementById('wolontariat').value == 2){
+              document.getElementById('wolont').textContent = "0";
+            }
+
+            if(document.getElementById('pasek').value == 1){
+              inne += 7;
+              document.getElementById('pas').textContent = "7";
+            }
+            else if(document.getElementById('pasek').value == 2){
+              document.getElementById('pas').textContent = "0";
+            }
+
+            
+            suma += inne;
+
+            //INNE2
+            var inne2 = 0;
+
+            if(document.getElementById('konkursy1').value == 1){
+              inne2 += 10;
+            }
+            else if(document.getElementById('konkursy1').value == 2){
+              inne2 += 18;
+            }
+            else if(document.getElementById('konkursy1').value == 3){
+              inne2 += 0;
+            }
+
+            if(document.getElementById('konkursy2').value == 1){
+              inne2 += 5;
+            }
+            else if(document.getElementById('konkursy2').value == 2){
+              inne2 += 10;
+            }
+            else if(document.getElementById('konkursy2').value == 3){
+              inne2 += 0;
+            }
+
+            if(document.getElementById('konkursy3').value == 1){
+              inne2 += 7;
+            }
+            else if(document.getElementById('konkursy3').value == 2){
+              inne2 += 14;
+            }
+            else if(document.getElementById('konkursy3').value == 3){
+              inne2 += 0;
+            }
+
+            if(document.getElementById('konkursy4').value == 1){
+              inne2 += 10;
+            }
+            else if(document.getElementById('konkursy4').value == 2){
+              inne2 += 18;
+            }
+            else if(document.getElementById('konkursy4').value == 3){
+              inne2 += 0;
+            }
+
+            if(document.getElementById('konkursy5').value == 1){
+              inne2 += 4;
+            }
+            else if(document.getElementById('konkursy5').value == 2){
+              inne2 += 8;
+            }
+            else if(document.getElementById('konkursy5').value == 3){
+              inne2 += 0;
+            }
+
+            if(document.getElementById('konkursy6').value == 1){
+              inne2 += 3;
+            }
+            else if(document.getElementById('konkursy6').value == 2){
+              inne2 += 6;
+            }
+            else if(document.getElementById('konkursy6').value == 3){
+              inne2 += 0;
+            }
+
+            if(document.getElementById('konkursy7').value == 1){
+              inne2 += 7;
+            }
+            else if(document.getElementById('konkursy7').value == 2){
+              inne2 += 10;
+            }
+            else if(document.getElementById('konkursy7').value == 3){
+              inne2 += 0;
+            }
+
+            if(document.getElementById('konkursy8').value == 1){
+              inne2 += 3;
+            }
+            else if(document.getElementById('konkursy8').value == 2){
+              inne2 += 7;
+            }
+            else if(document.getElementById('konkursy8').value == 3){
+              inne2 += 0;
+            }
+
+            if(document.getElementById('konkursy9').value == 1){
+              inne2 += 2;
+            }
+            else if(document.getElementById('konkursy9').value == 2){
+              inne2 += 5;
+            }
+            else if(document.getElementById('konkursy9').value == 3){
+              inne2 += 0;
+            }
+
+            if(document.getElementById('konkursy10').value == 1){
+              inne2 += 4;
+            }
+            else if(document.getElementById('konkursy10').value == 2){
+              inne2 += 8;
+            }
+            else if(document.getElementById('konkursy10').value == 3){
+              inne2 += 3;
+            }
+            else if(document.getElementById('konkursy10').value == 4){
+              inne2 += 6;
+            }
+            else if(document.getElementById('konkursy10').value == 5){
+              inne2 += 2;
+            }
+            else if(document.getElementById('konkursy10').value == 6){
+              inne2 += 4;
+            }
+            else if(document.getElementById('konkursy10').value == 7){
+              inne2 += 1;
+            }
+            else if(document.getElementById('konkursy10').value == 8){
+              inne2 += 2;
+            }
+
+            if(inne2 >= 18){
+              suma += 18;
+              document.getElementById('osiag').textContent = "18";
+            }
+            else{
+              suma += inne2;
+              document.getElementById('osiag').textContent = inne2;
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+            //PODSUMOWANIE
+            document.getElementById('suma').textContent = suma;
+
+            if(document.getElementById('olimpiada').value == 1){
+              document.getElementById('suma').textContent = "[olimpiada] 200";
+            }
+        })
+
+    
+            
+    });
+  </script>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Twoje punkty</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">SUMA:</span>
+          <span class="badge alert-success"><b id="suma">-</b>/200</span>
+        </h4>
+        
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Egzaminy</h6>
+              <small class="text-muted">j. Polski, j. Angielski, Matematyka</small>
+            </div>
+            <span class="text-muted"><b id="egzaminy">-</b>/100</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Oceny</h6>
+              <small class="text-muted">j. Polski, Matematyka, I wybrany, II wybrany</small>
+            </div>
+            <span class="text-muted"><b id="oceny">-</b>/72</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Wolontariat</h6>
+            </div>
+            <span class="text-muted"><b id="wolont">-</b>/3</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Czerwony pasek</h6>
+            </div>
+            <span class="text-muted"><b id="pas">-</b>/7</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Szczególne osiągnięcia</h6>
+              <small class="text-muted">Laureat/finalista punktowanych konkursów</small>
+            </div>
+            <span class="text-muted"><b id="osiag">-</b>/18</span>
+          </li>
+        </ul>
+  
+        
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel2">Error...</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-danger" role="alert">
+          Sprawdź wszystkie pola!
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+</body>
+</html>
