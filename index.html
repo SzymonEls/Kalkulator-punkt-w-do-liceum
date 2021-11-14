@@ -24,7 +24,7 @@
     <div class="container">
       <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="favicon.jpg" alt="" width="72" height="72">
-        <h2>Licznik punktów do szkoły średniej</h2>
+        <h2>Kalkulator punktów do szkoły średniej</h2>
         <p class="lead">Nie daję 100% pewności, że punkty są dobrze policzone!</p>
       </div>
 
@@ -255,17 +255,27 @@
 
           <div class="d-block my-3">
             <label for="cc-name">Czy jesteś <u>finalistą turnieju z przedmiotów artystycznych</u> nieobjętych ramowym planem nauczania szkoły artystycznej?</label>
-            <select class="form-select form-control" id="konkursy10" style="width: 75%;" required>
+            <select class="form-select form-control" id="konkursy10" style="width: 25%;" required>
               <option value="" selected>Wybierz</option>
-              <option value="0">Nie</option>
-              <option value="1">Tak, międzynarodowym</option>
-              <option value="2">Tak, międzynarodowym x2</option>
-              <option value="3">Tak, krajowym</option>
-              <option value="4">Tak, krajowym x2</option>
-              <option value="5">Tak, wojewódzkim</option>
-              <option value="6">Tak, wojewódzkim x2</option>
-              <option value="7">Tak, powiatowym</option>
-              <option value="8">Tak, powiatowym x2</option>
+              <option value="1">Tak</option>
+              <option value="2">Tak >1</option>
+              <option value="3">Nie</option>
+            </select>
+          </div>
+
+          <div class="d-block my-3">
+            <label for="cc-name">Czy uzyskałeś/-aś wysokie miejsca w zawodach wiedzy innych niż wymienione wyżej, artystycznych lub sportowych, organizowanych przez kuratora oświaty lub inne podmioty działające na terenie szkoły? Na szczeblu?</label>
+            <select class="form-select form-control" id="konkursy11" style="width: 75%;" required>
+              <option value="" selected>Wybierz</option>
+              <option value="1">Nie</option>
+              <option value="2">Tak, międzynarodowym</option>
+              <option value="3">Tak, międzynarodowym x2</option>
+              <option value="4">Tak, krajowym</option>
+              <option value="5">Tak, krajowym x2</option>
+              <option value="6">Tak, wojewódzkim</option>
+              <option value="7">Tak, wojewódzkim x2</option>
+              <option value="8">Tak, powiatowym</option>
+              <option value="9">Tak, powiatowym x2</option>
             </select>
           </div>
 			
@@ -483,37 +493,50 @@ $("#prospects_form").submit(function(e) {
             }
 
             if(document.getElementById('konkursy9').value == 1){
-              inne2 += 2;
+              inne2 += 3;
             }
             else if(document.getElementById('konkursy9').value == 2){
-              inne2 += 5;
+              inne2 += 7;
             }
             else if(document.getElementById('konkursy9').value == 3){
               inne2 += 0;
             }
 
             if(document.getElementById('konkursy10').value == 1){
-              inne2 += 4;
-            }
-            else if(document.getElementById('konkursy10').value == 2){
-              inne2 += 8;
-            }
-            else if(document.getElementById('konkursy10').value == 3){
-              inne2 += 3;
-            }
-            else if(document.getElementById('konkursy10').value == 4){
-              inne2 += 6;
-            }
-            else if(document.getElementById('konkursy10').value == 5){
               inne2 += 2;
             }
-            else if(document.getElementById('konkursy10').value == 6){
+            else if(document.getElementById('konkursy10').value == 2){
+              inne2 += 5;
+            }
+            else if(document.getElementById('konkursy10').value == 3){
+              inne2 += 0;
+            }
+
+            if(document.getElementById('konkursy11').value == 1){
+              inne2 += 0;
+            }
+            else if(document.getElementById('konkursy11').value == 2){
               inne2 += 4;
             }
-            else if(document.getElementById('konkursy10').value == 7){
+            else if(document.getElementById('konkursy11').value == 3){
+              inne2 += 8;
+            }
+            else if(document.getElementById('konkursy11').value == 4){
+              inne2 += 3;
+            }
+            else if(document.getElementById('konkursy11').value == 5){
+              inne2 += 6;
+            }
+            else if(document.getElementById('konkursy11').value == 6){
+              inne2 += 2;
+            }
+            else if(document.getElementById('konkursy11').value == 7){
+              inne2 += 4;
+            }
+            else if(document.getElementById('konkursy11').value == 8){
               inne2 += 1;
             }
-            else if(document.getElementById('konkursy10').value == 8){
+            else if(document.getElementById('konkursy11').value == 9){
               inne2 += 2;
             }
 
